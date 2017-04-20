@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .flip {
+        transform: translate3d(0, 0, 0);
+        margin: 40px;
+    }
+    
+    .flip-box {
+        position: relative;
+        width: 110px;
+        height: 140px;
+        overflow: hidden;
+    }
+    
+    .flip-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .5s ease-in-out;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+    
+    .flip-item img {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        margin: 32px auto;
+        display: block;
+    }
+    
+    .flip-item-text {
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .flip-item-front {
+        transform: rotateY(0deg);
+        z-index: 2;
+        background: #fff;
+    }
+    
+    .flip-item-back {
+        transform: rotateY(180deg);
+        z-index: 1;
+        background: #009fff;
+    }
+    
+    .flip-item-back .flip-item-text {
+        color: #fff;
+    }
+    
+    .flip-box:hover .flip-item-front {
+        z-index: 1;
+        transform: rotateY(180deg);
+    }
+    
+    .flip-box:hover .flip-item-back {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    
+    .flip-item-bling {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-top: -100px;
+        margin-left: -100px;
+        background: url(animation.png) center no-repeat;
+        z-index: -1;
+    }
+    
+    .flip-box:hover .flip-item-bling {
+        transform: translate3d(0, 0, 0);
+        animation: rotate infinite 1s linear;
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform-origin: center;
+            transform: rotate3d(0, 0, 1, 0deg);
+        }
+        100% {
+            transform-origin: center;
+            transform: rotate3d(0, 0, 1, 360deg);
+        }
+    }
+    
+    .light {
+        background: #fff;
+        width: 180px;
+        height: 180px;
+        margin: 100px auto;
+        position: relative;
+        text-align: center;
+        color: #333;
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .light-inner {
+        padding: 60px 30px 0;
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        transition: background 0.35s;
+        backface-visibility: hidden;
+    }
+    
+    .light-inner:before,
+    .light-inner:after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        right: 30px;
+        bottom: 30px;
+        border: 1px solid #fff;
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+    }
+    
+    .light-inner:before {
+        border-left: 0;
+        border-right: 0;
+        transform: scaleX(0);
+    }
+    
+    .light-inner:after {
+        border-top: 0;
+        border-bottom: 0;
+        transform: scaleY(0);
+    }
+    
+    .light:hover .light-inner {
+        background: #458fd2
+    }
+    
+    .light:hover .light-inner:before,
+    .light:hover .light-inner:after {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    .light-inner p {
+        transition: opacity .35s, transform 0.35s;
+        transform: translate3d(0, 20px, 0);
+        color: #fff;
+        opacity: 0;
+        line-height: 30px;
+    }
+    
+    .light:hover .light-inner p {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="flip">
+        <div class="flip-box">
+            <a href="http://caibaojian.com/" target="_blank" class="flip-item flip-item-front">
+                <img src="weibo.jpg" alt="">
+                <span class="flip-item-text">前端开发博客</span>
+            </a>
+            <a href="http://hao.caibaojian.com/" target="_blank" class="flip-item flip-item-back">
+                <div class="flip-item-bling"></div>
+                <img src="manong.jpg" alt="">
+                <span class="flip-item-text">码农头条</span>
+            </a>
+        </div>
+    </div> -->
+    <br>
+    <div class="light">
+        <img src="http://tva2.sinaimg.cn/crop.0.0.180.180.180/6830a53bjw8f2qo4xzc2zj20500500t0.jpg" />
+        <div class="light-inner">
+            <p>前端开发博客</p>
+            <p>关注前端开发</p>
+        </div>
+    </div>
+</body>
+
+</html>

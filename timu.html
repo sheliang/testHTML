@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<input list="Country" />
+		<datalist id="Country">
+			<option value="India">
+			<option value="Italy">
+			<option value="Iran">
+			<option value="Israel">
+			<option value="Indonesia">
+		</datalist>
+
+		<script type="text/javascript">
+			function makeClosures(arr, fn) {
+				var result = [];
+				arr.forEach(function(item) {
+					result.push(function() {
+						return fn(item);
+					});
+				});
+				return result;
+			}
+
+			//			var arr = [7, 8, 9, 10];
+			var arr = [1, 2, 3];
+			var square = function(x) {
+				console.log(x);
+				console.log(x * x);
+			};
+			var funcs = makeClosures(arr, square);
+
+			funcs[1]();
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>svg动态时钟</title>
+		<style type="text/css">
+			svg {
+				position: absolute;
+				top: 10%;
+				width: 100%;
+				height: 80%;
+			}
+			
+			path {
+				stroke: #fff;
+				stroke-linecap: round;
+				stroke-width: 35;
+				fill: none;
+			}
+			
+			#sec {
+				stroke: #fff;
+				stroke-width: 20;
+			}
+			
+			#min {
+				stroke: #fff;
+				stroke-width: 30;
+			}
+			
+			#hour {
+				stroke: #fff;
+				stroke-width: 30;
+			}
+			
+			#nowtimes {
+				margin-top: 7px;
+				background-color: #313131;
+			}
+			
+			#nowtimes .parent {
+				width: 30px;
+				position: relative;
+				height: 30px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			.tdtimes {
+				display: inline-block;
+				font-size: .7vw;
+				color: #979798;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="nowtimes">
+			<div class="parent">
+				<svg height="200" width="200" viewBox="0 0 1000 1000">
+					<path d="M978,500c0,263.99-214.01,478-478,478s-478-214.01-478-478,214.01-478,478-478,478,214.01,478,478zm-888.93,237.25,20.179-11.65m779.16-449.85l22.517-13m-648.18,648.18,11.65-20.18m449.85-779.16l13-22.517m-711.75,410.93h23.305m899.7,0h26m-885.43-237.25,20.179,11.65m779.16,449.85,22.517,13m-648.18-648.18l11.652,20.183m449.85,779.16,13,22.517m-237.25-885.43v23.305m0,899.7,0,26" />
+					<path d="M500,500,500,236" id="hour" />
+					<path d="M500,500,500,120" id="min" />
+					<path d="M500,500,500,90" id="sec" />
+				</svg>
+			</div>
+			<div class="tdtimes" id="tdtimes"></div>
+		</div>
+
+		<script type="text/javascript">
+			setInterval(function() {
+				function r(el, deg) {
+					el.setAttribute('transform', 'rotate(' + deg + ' 500 500)')
+				}
+				var d = new Date();
+				r(sec, 6 * d.getSeconds());
+				r(min, 6 * d.getMinutes());
+				r(hour, 30 * (d.getHours() % 12) + d.getMinutes() / 2);
+				document.getElementById("tdtimes").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+			}, 1000);
+		</script>
+	</body>
+
+</html>

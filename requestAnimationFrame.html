@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,
+			body {
+				height: 3500px;
+			}
+			
+			#scrollTop {
+				position: fixed;
+				right: 15px;
+				bottom: 15px;
+				cursor: pointer;
+			}
+			
+			#tu{
+				position: relative;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<span id="scrollTop">返回顶部</span>
+		<div id="box">
+
+		</div>
+
+		<span id="tu">这是一只兔子</span>
+
+		<script src="http://omsci5abv.bkt.clouddn.com/js/tween.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://omsci5abv.bkt.clouddn.com/js/animation.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var scrollTop = document.getElementById("scrollTop");
+			scrollTop.addEventListener("click", function() {
+				Math.animation(document.body.scrollTop, 0, function(value) {
+					document.body.scrollTop = value;
+				}, 'Quart.easeOut', 600);
+			});
+
+			Math.animation(0, 200, function(value) {
+				document.getElementById("tu").style.left = value + "px";
+				document.getElementById("tu").style.top = value + "px";
+			}, 'Elastic.easeOut', "4s");
+		</script>
+	</body>
+
+</html>

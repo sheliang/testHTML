@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			body {
+				height: 1500px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="dd"></div>
+	</body>
+
+	<script src="js/api.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var i = 0;
+		LoadingBar.setWidth(1);
+		var t = setInterval(function() {
+			if(i === 100) {
+				clearInterval(t);
+			} else {
+				i += 10;
+				LoadingBar.setWidth(i);
+			}
+		}, 1000);
+
+		//		console.log(api.timeFormat(1490926963683, 'yyyy-MM-dd'));
+		//      设置ajaxbase_URL
+		//		api.ajax.base_URL = "http://192.168.0.85:3600";
+		//		api.ajax("POST", "/cityList.shtml", {
+		//			name: "",
+		//			pageNum: 1,
+		//			pageSize: 10
+		//		}, function(data) {
+		//			console.log(JSON.stringify(data));
+		//		});
+
+		//		api.ajax("GET", "/queryPriceAdjustAreaInfo.shtml", {
+		//			cityId: 25,
+		//			areaId: 30,
+		//			name: "了山区"
+		//		}, function(data) {
+		//			console.log(JSON.stringify(data));
+		//		});
+
+		//		api.setCookie("jack","666666",1);
+		//		var arr = api.getCookie("jack");
+		//		api.delCookie("jack");
+		//		console.log(arr);
+		api.ajax.base_URL = "http://192.168.0.85:3000";
+		api.ajax("POST","/test","",function(data){
+			console.log(data);
+		});
+	</script>
+
+</html>

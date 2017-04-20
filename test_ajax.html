@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script src="js/api.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			api.ajax.base_URL = "http://192.168.0.85:3000";
+			api.ajax("POST", "/login", {
+				username: "wsy",
+				password: 123456
+			}, function(data) {
+				console.log(data);
+			});
+		</script>
+	</body>
+
+</html>

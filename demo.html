@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<!--<link rel="stylesheet" href="css/reset.css" />-->
+		<link rel="stylesheet" href="css/ui.css" />
+		<style type="text/css">
+			.dd {
+				height: 50px;
+				line-height: 50px;
+				margin-top: 15px;
+			}
+			
+			.icons li {
+				float: left;
+				width: 200px;
+				margin-top: 15px;
+			}
+			.icons .iconfont{
+				font-size: 32px;
+			}
+			
+			.btns .btn{
+				margin-top: 5px;
+			}
+		</style>
+	</head>
+
+	<body class="container">
+		<h4 class="text-center">文本       & 	文本色</h4>
+		<div class="d1">
+			<h1 class="text-mormal">h1 默认文本色</h1>
+			<h2 class="text-primary">h2 基本文本色</h2>
+			<h3 class="text-warning">h3 警告文本色</h3>
+			<h4 class="text-danger">h4 危险文本色</h4>
+			<h5 class="text-disabled">h5 禁用文本色</h5>
+			<h6 class="text-disabled">h6 禁用文本色</h6>
+		</div>
+
+		<div class="gap"></div>
+
+		<div class="dd bg-danger radius">红色背景色 带圆角</div>
+		<div class="dd bg-primary text-left">基本背景色 不带圆角 文本居左</div>
+		<div class="dd bg-warning radius-full text-right">警告背景色 满圆角 文本居右</div>
+		<div class="dd bg-default text-center">默认背景色 文本居中</div>
+		<div class="dd bg-disabled text-center">禁用背景色 文本居中</div>
+
+		<div class="gap"></div>
+
+		<div class="btns">
+			<a href="javascript:;" class="btn">a标签按钮</a>
+			<button class="btn btn-primary">button 按钮</button>
+			<button class="btn btn-danger">button 按钮</button>
+			<input type="button" class="btn btn-warnning" value="input 按钮" />
+			<input type="button" class="btn btn-primary disabled" value="input 按钮 禁用" />
+
+			<h4>块级按钮</h4>
+			<button class="btn btn-block btn-default">块级按钮</button>
+			<button class="btn btn-block btn-danger">块级按钮</button>
+			<button class="btn btn-block btn-warnning">块级按钮</button>
+			<button class="btn btn-block btn-primary">块级按钮</button>
+		</div>
+
+		<div class="gap"></div>
+
+		<h4 class="text-center">浮动与清除浮动</h4>
+		<div class="container">
+			<div class="fl">左浮动</div>
+			<div class="fr">右浮动</div>
+			<div class="clear text-center">清除浮动</div>
+		</div>
+
+		<h4 class="text-center">flex 布局 两端对齐</h4>
+		<div class="gap"></div>
+		<div class="flex flex-justify text-center">
+			<div class="flex1">flex1</div>
+			<div class="flex1">flex1</div>
+			<div class="flex1">flex1</div>
+			<div class="flex1">flex1</div>
+			<div class="flex1">flex1</div>
+			<div class="flex1">flex1</div>
+		</div>
+
+		<div class="line"></div>
+
+		<h4 class="text-center">链接</h4>
+		<a href="http://www.baidu.com"></a>
+
+		<div class="gap"></div>
+
+		<h4 class="text-center">iconfont</h4>
+		<div class="icons">
+			<ul class="text-center">
+				<li>
+					<span class="iconfont icon-biaoqian"></span>
+					<p>标签</p>
+				</li>
+				<li>
+					<span class="iconfont icon-zuo"></span>
+					<p>左</p>
+				</li>
+				<li>
+					<span class="iconfont icon-right"></span>
+					<p>右</p>
+				</li>
+				<li>
+					<span class="iconfont icon-shang"></span>
+					<p>上</p>
+				</li>
+				<li>
+					<span class="iconfont icon-xia"></span>
+					<p>下</p>
+				</li>
+				<li>
+					<span class="iconfont icon-dingwei"></span>
+					<p>定位</p>
+				</li>
+				<li>
+					<span class="iconfont icon-shezhi"></span>
+					<p>设置</p>
+				</li>
+				<li>
+					<span class="iconfont icon-saoyisao"></span>
+					<p>扫一扫</p>
+				</li>
+				<li>
+					<span class="iconfont icon-user"></span>
+					<p>用户</p>
+				</li>
+				<li>
+					<span class="iconfont icon-erweima"></span>
+					<p>二维码</p>
+				</li>
+				<li>
+					<span class="iconfont icon-shouhuodizhi"></span>
+					<p>收货地址</p>
+				</li>
+				<li>
+					<span class="iconfont icon-huo"></span>
+					<p>火</p>
+				</li>
+				<li>
+					<span class="iconfont icon-ticket"></span>
+					<p>票</p>
+				</li>
+				<li>
+					<span class="iconfont icon-fill_car"></span>
+					<p>汽车</p>
+				</li>
+				<li>
+					<span class="iconfont icon-guanbi"></span>
+					<p>关闭</p>
+				</li>
+				<li>
+					<span class="iconfont icon-shanchu"></span>
+					<p>删除</p>
+				</li>
+				<li>
+					<span class="iconfont icon-tianjia"></span>
+					<p>添加</p>
+				</li>
+				<li>
+					<span class="iconfont icon-shoucang"></span>
+					<p>收藏</p>
+				</li>
+				<li>
+					<span class="iconfont icon-caidan"></span>
+					<p>菜单</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.typed-cursor {
+				opacity: 1;
+				-webkit-animation: blink 0.7s infinite;
+				-moz-animation: blink 0.7s infinite;
+				animation: blink 0.7s infinite;
+			}
+			
+			@keyframes blink {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-moz-keyframes blink {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<span id="box"></span>
+	</body>
+
+	<script src="js/typed.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/html" id="text">
+		4 月10日， 哈尔滨海关对外宣布， 其下属萝北海关近日破获一起特大涉嫌走私上万年猛犸象牙、 披毛犀角、 玉石案。 2 月16日， 该海关关员从一辆自俄罗斯进境的中国籍货车私自改装的夹层中， 一次性查获产自俄罗斯西伯利亚地区的上万年猛犸象牙107根， 披毛犀角37块， 此外还有玉石原料1 .11 吨。 目前有两名犯罪嫌疑人落网。 这也是中国海关近10年间查获的最大宗涉嫌走私猛犸象牙案。 据萝北海关关长宋长武介绍， 为牟取非法利益， 犯罪嫌疑人韩某在中国境内购买2辆货车后， 在车体中特制用于夹藏走私货物的暗格， 雇佣犯罪嫌疑人高某等人驾车往返界河黑龙江， 从俄罗斯向中国走私猛犸象牙及披毛犀角， 其行为已涉嫌走私普通货物罪。 目前， 该案在进一步侦办中。
+	</script>
+	<script type="text/javascript">
+		var str = document.getElementById("text").innerHTML,
+			arr = [str];
+		document.addEventListener('DOMContentLoaded', function() {
+			Typed.new('#box', {
+				strings: arr,
+				typeSpeed: 1
+			});
+		});
+	</script>
+
+</html>

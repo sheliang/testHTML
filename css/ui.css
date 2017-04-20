@@ -1,0 +1,428 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("iconfont.css");
+@import url("from.css");
+
+/*
+ * 容器
+ * */
+
+.container {
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+
+/*
+ * 字体
+ * */
+
+h1,
+.h1 {
+	font-size: 32px;
+}
+
+h2,
+.h2 {
+	font-size: 28px;
+}
+
+h3,
+.h3 {
+	font-size: 24px;
+	font-weight: normal;
+}
+
+h4,
+.h4 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+h5,
+.h5 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+h6,
+.h6 {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+/*
+ * 对齐方式
+ * */
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-mormal {
+	text-align: initial;
+}
+
+
+/*
+ * 大小写转换
+ * */
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+
+/*
+ * 字体颜色
+ * primary default success warnning danger
+ * */
+
+.text-primary {
+	color: #01AAED;
+}
+
+.text-default {
+	color: #696969;
+}
+
+.text-success {
+	color: #5eb95e;
+}
+
+.text-warning {
+	color: #f37b1d;
+}
+
+.text-danger {
+	color: #dd514c;
+}
+
+.text-disabled {
+	color: #DCDCDC;
+}
+
+
+/*
+ * 背景颜色
+ * */
+
+.bg-primary {
+	background-color: #01AAED;
+}
+
+.bg-default {
+	background-color: transparent;
+}
+
+.bg-success {
+	background-color: #5EB95E;
+}
+
+.bg-warning {
+	background-color: #F37B1D;
+}
+
+.bg-danger {
+	background-color: #DD514C;
+}
+
+.bg-disabled {
+	background-color: #DCDCDC;
+}
+
+
+/*
+ * 圆角
+ * */
+
+.radius {
+	border-radius: 4px;
+}
+
+.radius-full {
+	border-radius: 50px;
+}
+
+
+/*
+ * 按钮
+ * */
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	background-color: #FFFFFF;
+	border: 1px solid #DCDCDC;
+}
+
+.btn-default {
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+
+/*按钮大小*/
+
+.btn.btn-size-default {
+	padding: 4px 12px;
+}
+
+.btn.btn-size-large {
+	padding: 7px 18px;
+}
+
+.btn.btn-block {
+	width: 100%;
+	padding: 7px 0;
+}
+
+
+/*按钮样式*/
+
+.btn-primary,
+.btn-success,
+.btn-warnning,
+.btn-danger {
+	color: #FFFFFF;
+}
+
+.btn-primary {
+	background-color: #01AAED;
+	border-color: #01AAED;
+}
+
+.btn-success {
+	background-color: #5eb95e;
+	border-color: #5EB95E;
+}
+
+.btn-warnning {
+	background-color: #f37b1d;
+	border-color: #F37B1D;
+}
+
+.btn-danger {
+	background-color: #dd514c;
+	border-color: #DD514C;
+}
+
+.btn:active,
+.btn:disabled,
+.btn.disabled {
+	opacity: .8;
+}
+
+.btn:disabled,
+.btn.disabled {
+	cursor: not-allowed;
+}
+
+
+/*
+ * 浮动
+ * */
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/*
+Name:			style_clearfix
+Example:		class="clearfix|cl"
+Explain:		Clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
+*/
+
+.clear:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+.clear {
+	zoom: 1
+}
+
+
+/*
+ * flex布局  
+ * */
+
+.flex {
+	display: -webkit-flex;
+	display: flex;
+}
+
+
+/*
+ * .flex-md flex-middle
+ * 垂直居中
+ **/
+
+.flex-md {
+	align-items: center;
+}
+
+
+/*
+ * .flex-justify
+ * 两端对齐
+ * .flex-center
+ * 居中对齐
+ * */
+
+.flex-justify {
+	justify-content: space-between;
+}
+
+.flex-center {
+	justify-content: center;
+}
+
+.flex1 {
+	flex: 1;
+}
+
+
+/*
+ * 显示与隐藏
+ * */
+
+.none {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+
+/*
+ * 组 group
+ * */
+
+.group {
+	width: 100%;
+	position: relative;
+}
+
+.group-justify {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: separate;
+}
+
+
+/*
+ *当 <a> 元素没有文本内容，但有 href 属性的时候，显示它的 href 属性：
+ * */
+
+a[href^="http"]:empty::before {
+	content: attr(href);
+}
+
+
+/*
+ *给 “默认” 链接定义样式
+ * */
+
+a[href]:not([class]) {
+	color: #01AAED;
+	text-decoration: underline;
+}
+
+
+/*
+ * 禁止选中文本 
+ * */
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+
+/*
+ * 线
+ * */
+
+.line {
+	width: 100%;
+	height: 0;
+	border-top: 1px solid #DCDCDC;
+	margin: 15px 0;
+}
+
+
+/*
+ * 间隙
+ * */
+
+.gap {
+	height: 15px;
+	background-color: transparent;
+	border: none;
+}
+
+
+/*
+ * box 获取鼠标阴影
+ * */
+
+.box {
+	border: 1px solid #DCDCDC;
+}
+
+.box:hover {
+	box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5);
+}

@@ -1,0 +1,1 @@
+列布局			display: table-cell;再定宽度即可

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script src="js/api.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//			api.ajax.base_URL = "http://112.74.133.11:8088/utoo/manage";
+			//			api.ajax("POST", "/user", {
+			//				authority: "1",
+			//				department: "13",
+			//				loginName: "jackie",
+			//				pwd: "123456",
+			//				userName: "jackie"
+			//			}, function(data) {
+			//				alert("ok");
+			//			});
+			api.ajax.base_URL = "http://192.168.0.85";
+			api.ajax("POST", "/test.php", {
+				username: "wsy",
+				password: 123456
+			}, function(data) {
+				console.log(data);
+			})
+		</script>
+	</body>
+
+</html>

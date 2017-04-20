@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>from表单</title>
+		<link rel="stylesheet" type="text/css" href="css/ui.css" />
+	</head>
+
+	<body class="container">
+		<form action="javascript: console.log(document.getElementsByTagName('form')[0])" method="post" class="form">
+			<div class="form-row clear">
+				<label for="username">用户名</label>
+				<input type="text" name="username" id="username" value="" placeholder="用户名" class="radius" />
+			</div>
+			<div class="form-row clear">
+				<label for="password">用户密码</label>
+				<input type="password" name="password" id="password" value="" placeholder="用户密码" class="radius" />
+			</div>
+			<div class="form-row clear">
+				<label for="repassword">确认密码</label>
+				<input type="password" name="repassword" id="repassword" value="" placeholder="确认密码" class="radius" />
+			</div>
+			<div class="form-row clear">
+				<label for="repassword">验证码</label>
+				<div class="form-content fr">
+					<input type="text" name="code" id="code" value="" maxlength="4" class="form-content-input radius" placeholder="验证码" />
+					<input type="button" name="getCode" id="getCode" value="验证码" class="form-content-btn btn btn-primary radius" />
+				</div>
+			</div>
+			<div class="form-row clear">
+				<label for="checkbox">记住密码</label>
+				<div id="checkbox" class="form-content fr text-right">
+					<input type="checkbox" name="switch" id="switch" class="checkbox" />
+					<label for="switch"></label>
+				</div>
+			</div>
+			<div class="form-row clear">
+				<input type="button" id="submit" class="btn btn-block btn-primary radius" value="确认提交" />
+			</div>
+		</form>
+
+		<div class="gap"></div>
+
+		<div class="box radius">
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		</div>
+
+		<script type="text/javascript">
+			document.getElementById("getCode").addEventListener("click", function() {
+				var i = 5,
+					t, that = this;
+				t = setInterval(function() {
+					if(i == 0) {
+						clearInterval(t);
+						that.className = that.className.replace("disabled", "");
+						that.value = "验证码";
+						that.setAttribute("disabled", false);
+					} else {
+						i--;
+						that.value = i + "s";
+						that.className += that.className.indexOf("disabled") > 0 ? "" : " disabled";
+						that.setAttribute("disabled", true);
+					}
+				}, 1000);
+			});
+
+			document.getElementById("submit").addEventListener("click", function() {
+				var form = document.getElementsByTagName("form");
+				var formData = new FormData(form);
+				console.log(formData);
+			});
+		</script>
+	</body>
+
+</html>
